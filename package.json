@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch --env-file .env src/server.ts"
+    "dev": "tsx watch --env-file .env src/server.ts",
+    "build": "tsup src --format esm"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@types/node": "^20.12.4",
     "prisma": "^5.12.1",
+    "tsup": "^8.0.2",
     "tsx": "^4.7.2",
     "typescript": "^5.4.4"
   },
