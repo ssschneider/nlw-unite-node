@@ -2,7 +2,7 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-    "title": "NLW Unite Event",
+    "title": "NLW Unite Event New",
     "details": "Evento gratuito da Rocketseat",
     "maximumAttendees": 100
 }
