@@ -9,8 +9,13 @@ import { getAttendeeBadge } from "./routes/get-attendee-badge";
 import { checkIn } from "./routes/check-ins";
 import { getAttendees } from "./routes/get-event-attendees";
 import { errorHandler } from "./error-handler";
+import fastifyCors from "@fastify/cors";
 
 const app = fastify();
+
+app.register(fastifyCors, {
+	origin: "*",
+});
 
 app.register(fastifySwagger, {
 	swagger: {
