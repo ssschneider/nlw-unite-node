@@ -2,17 +2,17 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-    "title": "NLW Unite 2024",
-    "details": "Evento gratuito da Rocketseat",
-    "maximumAttendees": 100
+    "title": "Novo Event",
+    "details": "null",
+    "maximumAttendees": 1
 }
 
 ###
 
-POST http://localhost:3333/events/9064a085-d52b-42d4-86af-ba8e6701c4ba/attendees
+POST http://localhost:3333/events/e247fa61-3f08-4e1e-b8e0-8d2d9e6538a0/attendees
 Content-Type: application/json
 
 {
     "name": "Sarah",
-    "email": "sarahh@email.com"
+    "email": "sarahhh@email.com"
 }
