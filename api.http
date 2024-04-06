@@ -2,26 +2,29 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-    "title": "Novo Evento",
+    "title": "Novo Eventooo",
     "details": "null",
     "maximumAttendees": 1
 }
 
 ###
 
-POST http://localhost:3333/events/66cd56c9-de43-465f-a652-2882414edda4/attendees
+POST http://localhost:3333/events/c724d1fd-62f1-4fa5-b343-3cca6cea187d/attendees
 Content-Type: application/json
 
 {
     "name": "Sarah",
-    "email": "sarahh@email.com"
+    "email": "sarah@email.com"
 }
 
 ###
-GET http://localhost:3333/events/66cd56c9-de43-465f-a652-2882414edda4
+GET http://localhost:3333/events/c724d1fd-62f1-4fa5-b343-3cca6cea187d
 
 ###
 GET http://localhost:3333/attendees/1/badge
 
 ###
-GET http://localhost:3333/attendees/1/check-in
+GET http://localhost:3333/attendees/7/check-in
+
+###
+GET http://localhost:3333/event/c724d1fd-62f1-4fa5-b343-3cca6cea187d/attendees
