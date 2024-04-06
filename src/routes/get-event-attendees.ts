@@ -19,6 +19,19 @@ export async function getAttendees(app: FastifyInstance) {
 						.default("0")
 						.transform(Number),
 				}),
+				response: {
+					200: z.object({
+						attendees: z.array(
+							z.object({
+								id: z.number().int(),
+								name: z.string(),
+								email: z.string().email(),
+								createdAt: z.date(),
+								checkInAt: z.date().nullable(),
+							})
+						)
+					})
+				},
 			},
 		},
 		async (request, reply) => {
@@ -59,7 +72,7 @@ export async function getAttendees(app: FastifyInstance) {
 						name: attendee.name,
 						email: attendee.email,
 						createdAt: attendee.createdAt,
-						checkInAt: attendee.checkIn?.createdAt,
+						checkInAt: attendee.checkIn?.createdAt ?? null,
 					};
 				}),
 			});
