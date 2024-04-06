@@ -8,6 +8,7 @@ import { getEvent } from "./routes/get-event";
 import { getAttendeeBadge } from "./routes/get-attendee-badge";
 import { checkIn } from "./routes/check-ins";
 import { getAttendees } from "./routes/get-event-attendees";
+import { errorHandler } from "./error-handler";
 
 const app = fastify();
 
@@ -36,6 +37,8 @@ app.register(getEvent);
 app.register(getAttendeeBadge);
 app.register(checkIn);
 app.register(getAttendees);
+
+app.setErrorHandler(errorHandler);
 
 app.listen({
 	port: 3333,
