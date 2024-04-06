@@ -9,6 +9,8 @@ export async function createEvent (app: FastifyInstance) {
 		"/events",
 		{
 			schema: {
+				summary: "Rota para a criação de eventos",
+				tags: ["events"],
 				body: z.object({
 					title: z.string().min(4),
 					details: z.string().nullable(),
