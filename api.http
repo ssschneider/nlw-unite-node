@@ -27,4 +27,4 @@ GET http://localhost:3333/attendees/1/badge
 GET http://localhost:3333/attendees/7/check-in
 
 ###
-GET http://localhost:3333/event/c724d1fd-62f1-4fa5-b343-3cca6cea187d/attendees
+GET http://localhost:3333/event/c724d1fd-62f1-4fa5-b343-3cca6cea187d/attendees?query=sarah
